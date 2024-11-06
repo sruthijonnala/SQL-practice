@@ -1,0 +1,55 @@
+
+
+> Write a query to get the current date and time from the system.
+select current_date;
+
+> Write a query to extract the year, month, and day from a given birthdate column in the employees table.
+ select *, extract( year from birthdate) as birthyear
+extract( month from birthdate) as birthmonth
+extract( day from birthdate) as birthday
+from employees
+
+
+>Write a query to find the number of days between two dates: the order_date and ship_date columns in an orders table.
+select datediff(order_date - shipdate)
+
+
+>Calculate the date 30 days after a given date (e.g., start_date) in the projects table
+select start_date, start_date + interval '30 days' as end date
+from projects
+
+
+> Write a query to find the date 6 months before the current date.
+select current_Date, current_Date - interval '6 months as old_date
+
+
+> Write a query to format a birthdate column in the format MM/DD/YYYY from a users table.
+select birthdate, to_char(birthdate, 'mm/dd/yyyy') from users
+
+
+> Convert a timestamp column to display only the date in the format YYYY-MM-DD.
+select timestamp, to_char(timestamp, 'yyyy-mm-dd') as new_format
+from users
+
+
+>Write a query to extract the day of the week (e.g., Monday, Tuesday) from a purchase_date column.
+select purchase_date, extract(day from purchase_date) as purchase_day from users
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
