@@ -36,6 +36,13 @@ from users
 select purchase_date, extract(day from purchase_date) as purchase_day from users
 
 
+> Write a query to find the age of each employee based on their birthdate.
+select emp_name, datediff(year, birthdate, current_date) as age from employees.
+
+
+> Get the details of the employee who was hired most recently.
+select emp_name, datediff(day, hire_date, current_date) as day_difference
+where day_difference < 5;
 
 
 
