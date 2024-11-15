@@ -1,0 +1,7 @@
+> Retrieve the products that have been ordered more than 5 times by any single customer.
+
+> select product_name from orders
+where order_id in (select customer_id
+from orders group by customer_id, product_id
+having count(order_id) > 5)
+
