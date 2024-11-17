@@ -6,3 +6,5 @@ from employee)as rank_table
 where salary_rank = 3;
 
 --using subquery
+select max(Salary) from employee
+where salary < (select max(salary) from employee)
