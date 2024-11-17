@@ -8,3 +8,9 @@ where salary_rank = 3;
 --using subquery
 select max(Salary) from employee
 where salary < (select max(salary) from employee)
+
+--using limit
+select salary from employee
+order by salary desc
+limit 3,1
+--limit n-1,1 i.e, it finds 4th heighest salary
