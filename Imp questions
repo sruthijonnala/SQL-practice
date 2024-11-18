@@ -27,3 +27,8 @@ LEFT JOIN
     employees m
 ON 
     e.manager_id = m.emp_id;
+
+--3.How do you identify duplicate records in a table?
+select name,count(name) from employee
+group by name
+having count(*) > 1
