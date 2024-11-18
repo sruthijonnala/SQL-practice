@@ -1,4 +1,4 @@
---Find the nth heighest salary
+--1.Find the nth heighest salary
 
 --using dense_rank
 select * from (select name,salary,dense_rank()over(order by salary desc) as salary_rank
@@ -14,3 +14,16 @@ select salary from employee
 order by salary desc
 limit 3,1
 --limit n-1,1 i.e, it finds 4th heighest salary
+
+--2.Display each employee’s name along with their manager’s name by performing a self-join on the ‘employees’ table 
+(which contains ‘emp_id’, ‘name’, and ‘manager_id’ columns).
+
+SELECT 
+    e.name AS Employee_Name,
+    m.name AS Manager_Name
+FROM 
+    employees e
+LEFT JOIN 
+    employees m
+ON 
+    e.manager_id = m.emp_id;
