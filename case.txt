@@ -1,0 +1,64 @@
+Write a query to display employee names and categorize their salary as:
+
+"High" if SALARY is greater than 50000.
+"Medium" if SALARY is between 30000 and 50000.
+"Low" if SALARY is less than 30000.
+Hint: Use CASE in the SELECT clause.
+
+SELECT NAME,CATEGORY,SALARY, 
+CASE
+WHEN SALARY > 50000 THEN 'HIGH'
+WHEN SALARY BETWEEN 30000 AND 500000 THEN 'MEDIUM'
+ELSE 'LOW'
+END AS SALARY_CATEGORY
+FROM EMPLOYEE
+----------------------------------------------------------
+Write a query to create a column named Department_Type that classifies departments as:
+"Core" for DEPT = 'HR' or 'Finance'.
+"Technical" for DEPT = 'IT' or 'Engineering'.
+"Other" for all other departments.
+
+SELECT NAME,DEP,
+CASE
+WHEN DEP IN (HR,FINANCE) THEN 'CORE'
+WHEN DEP IN (IT,ENGINEERING) THEN 'TECHNICAL'
+ELSE 'OTHER'
+END AS DEP_TYPE
+FROM EMPLOYEE
+--------------------------------------------------------
+Display a list of products and apply a discount based on their price:
+20% discount for products priced above 1000.
+10% discount for products priced between 500 and 1000.
+No discount for products priced below 500.
+Show the original price, discount percentage, and the final price.
+
+SELECT original_PRICE,
+CASE WHEN PRICE > 1000 THEN '20%'
+WHEN PRICE BETWEEN 500 AND 1000 THEN '10%'
+ELSE '0%'
+END as discount_percent
+price -(price * 
+case 
+when price > 1000 then 0.20
+when price between 500 and 10000 then 0.10
+else 0
+end) as final_price
+from orders
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
