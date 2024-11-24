@@ -2,4 +2,4 @@
 alter table employee
 add column designation text default Null;
 
-select * from employee;
+select * from employee
