@@ -31,7 +31,7 @@ select serial_no, type,sentiment, score,count(*) from reactions_type
 group by serial_no, type,sentiment, score
 having count(*) > 1;
 ---------------------------------------------------------------------------------------------------
---##Reaction##
+--##Reaction table##
 
 select * from reaction
 select serial_no,content_id,user_id,type,datetime, count(*)
