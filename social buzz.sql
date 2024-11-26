@@ -71,7 +71,7 @@ select * from reaction
 where serial_no between 100 and 200
 
 -----------------------------------------------------------------------------------------------------
---##Content##
+--##Content table##
 
 select * from content
 -- creating views
