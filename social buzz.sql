@@ -1,4 +1,4 @@
---##Reactions Type##
+--##Reactions Type table##
 
 select * from reactions_type
 Alter Table reactions_type
