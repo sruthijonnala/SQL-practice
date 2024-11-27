@@ -97,6 +97,41 @@ case
 	when type = 'gif' then 'G'
 	else 'V'
 end = 'A'
+	
+--------------------------------------------------------------------------------------------------------------------------
+--Write a query to determine which Category in Content.csv has the highest number of reactions in Reactions.csv.
+select category, count(category) as count_category from content
+group by category
+order by count_category desc
+
+create view  new_table as
+select c.*, r.reaction_type,r.datetime from content c
+join reaction r on c.content_id = r.content_id 
+	
+select * from new_table
+select category, count(reaction_type) as reaction_count from new_table
+group by category
+order by reaction_count desc
+
+SELECT c.Category, COUNT(r.Content_ID) AS Total_Reactions
+FROM Content c
+JOIN Reaction r ON c.Content_ID = r.Content_ID
+GROUP BY c.Category
+ORDER BY Total_Reactions DESC
+
+--Write a query to find the total number of reactions a specific user (e.g., User_ID = '92b87fa5-f271-43e0-af66-84fac21052e6') has made.
+
+select  count(*) from reaction
+where user_id = '92b87fa5-f271-43e0-af66-84fac21052e6'
+
+--Write a query to find content from Content.csv that has not received any reactions in Reactions.csv.
+SELECT c.Content_ID, c.content_Type, c.Category
+FROM Content c
+WHERE c.Content_ID NOT IN (
+    SELECT DISTINCT r.content_id
+    FROM Reaction r
+);
+
 
 
 	
