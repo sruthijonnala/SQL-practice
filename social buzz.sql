@@ -131,6 +131,7 @@ WHERE c.Content_ID NOT IN (
     SELECT DISTINCT r.content_id
     FROM Reaction r);
 -------------------------------------------------------------------------------------------------------------
+--date and time functions
 
 
 	
