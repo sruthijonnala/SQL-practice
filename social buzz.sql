@@ -133,6 +133,26 @@ WHERE c.Content_ID NOT IN (
 -------------------------------------------------------------------------------------------------------------
 --date and time functions
 
+select current_date
+select current_timestamp
+
+select *,extract(month from datetime) from reaction
+select *,extract(year from datetime) as year from reaction
+limit 5
+select *,extract(day from datetime) from reaction
+where serial_no = 1
+
+
+
+select *, to_char(datetime,'dd month yyyy') as formated_date from reaction
+select *, to_Char(datetime, 'month ddth yyyy') from reaction
+select serial_no,user_id,datetime, to_Char(datetime, 'month') as month from reaction
+
+
+
+select serial_no,user_id,datetime, datetime + interval '2 days' as add_2days from reaction
+select serial_no,user_id,datetime, datetime + interval '2 months' as add_2months from reaction
+select serial_no,user_id,datetime, datetime - interval '2 months' as remove_2months from reaction
 
 	
 
