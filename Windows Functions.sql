@@ -1,6 +1,4 @@
 select * from empp;
-select * from dept;
-select * from salgrade;
 
 -- Assign a unique rnk to each employee by salary within each department.
 select ename, sal,
