@@ -1,4 +1,0 @@
-/* Write a query to insert the below mentioned employee details to the table 'employee' */
-
-INSERT INTO student(Student_id,student_Name,Contact_Number)
-     VALUES (34,'Abel George',910023432);
