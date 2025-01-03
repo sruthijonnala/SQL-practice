@@ -26,8 +26,6 @@ INSERT INTO emp VALUES (7876, 'ADAMS' , 'CLERK'    , 7788, STR_TO_DATE('13-6-198
 INSERT INTO emp VALUES (7900, 'JAMES' , 'CLERK'    , 7698, STR_TO_DATE('3-12-1981' , '%d-%m-%Y'),  950, NULL, 30);
 INSERT INTO emp VALUES (7934, 'MILLER', 'CLERK'    , 7782, STR_TO_DATE('23-1-1982' , '%d-%m-%Y'), 1300, NULL, 10);
 
-select * from empp;
-
 -- Assign a unique rnk to each employee by salary within each department.
 select ename, sal,
 row_number() over(partition by deptno order by sal desc) as sal_rank
