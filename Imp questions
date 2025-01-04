@@ -40,6 +40,4 @@ where hire_date between '2022-10-21' and '2022-10-27'
 select * from employee
 where hire_date >= '2022-10-21' and hire_date <= '2022-10-27'
 
---5.
-
 
