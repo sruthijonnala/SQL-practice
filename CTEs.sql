@@ -34,9 +34,6 @@ with highsal as (
 )
 	select * from highsal;
     
--- find emp with comm greater than 500 and their deptname
--- find dept avg sal and resuse the result
-
 -- find emp with sal between 1000 and 3000 and emp with > 2000 sal using cte
 with salary as(
 	select ename, sal
@@ -45,3 +42,7 @@ with salary as(
 )
 	select * from salary
     where sal > 2000
+
+-- find emp with comm greater than 500 and their deptname
+-- find dept avg sal and resuse the result
+
