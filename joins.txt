@@ -51,7 +51,7 @@ group by c.customer_name, c.customer_id
 SELECT d.department_name, SUM(e.salary) AS total_salary_expenditure
 FROM departments d
 JOIN employees e ON d.department_id = e.department_id
-GROUP BY d.department_name;
+GROUP BY d.department_name
 
 
 
