@@ -31,13 +31,13 @@ ON
 --3.How do you identify duplicate records in a table?
 select name,count(name) from employee
 group by name
-having count(*) > 1
+having count(*) > 1;
 
 --4.How would you retrieve records between two dates in SQL?
 select * from employee
 where hire_date between '2022-10-21' and '2022-10-27'
 
 select * from employee
-where hire_date >= '2022-10-21' and hire_date <= '2022-10-27'
+where hire_date >= '2022-10-21' and hire_date <= '2022-10-27';
 
 
